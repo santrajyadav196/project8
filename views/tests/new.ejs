@@ -1,0 +1,37 @@
+<% layout ('layouts/boilerplate') %> 
+<div class="row">
+       <div class="col-6 offset-3">
+            <h1>Add New</h1>
+    <form action="/tests" method="POST" novalidate class='validated-form'>
+        <div class="mb-3">
+        <label class="form-label" for="name">Name:</label>
+        <input class="form-control" type="text" name="name" id="name" placeholder="name" required>
+         <div class='valid-feedback'>Looks good!!</div>
+        </div>
+         <div class="mb-3">
+        <label class="form-label" for="email">Email:</label>
+        <input class="form-control" type="text" name="email" id="email" placeholder="email" required>
+         <div class='valid-feedback'>Looks good!!</div>
+        </div>
+        <div class="mb-3">
+        <label class="form-label" for="testScore">First Round Score:</label>
+        <input class="form-control" type="number" name="testScore[round_first]" id="testScore" placeholder="test Score" required>
+         <div class='valid-feedback'>Looks good!!</div>
+        </div>
+         <div class="mb-3">
+        <label class="form-label" for="testScore">Second Round Score:</label>
+        <input class="form-control" type="number" name="testScore[round_second]" id="testScore" placeholder="test Score" required>
+         <div class='valid-feedback'>Looks good!!</div>
+        </div>
+        <div class="mb-3">
+        <label class="form-label" for="testScore">Third Round Score:</label>
+        <input class="form-control" type="number" name="testScore[round_third]" id="testScore" placeholder="test Score" required>
+         <div class='valid-feedback'>Looks good!!</div>
+        </div>
+        <div class="mb-3">
+        <button class='btn btn-info'>Submit</button>
+        <a class="btn btn-primary" href="/tests">Back</a>
+        <div class="mb-3">
+    </form>
+       </div>
+   </div>

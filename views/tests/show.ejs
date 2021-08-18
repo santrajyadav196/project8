@@ -1,0 +1,22 @@
+<% layout ('layouts/boilerplate') %> 
+ <div class="row">
+       <div class="col-6 offset-3">
+            <h1><%= test.name[0].toUpperCase() + test.name.slice(1) %></h1>
+    <ul>
+        <li><b>Email: </b> <%= test.email %></li>
+        <li><b>Test Score:</b></li>
+        <ul>
+            <li>Round First: <%= test.testScore.round_first %>/10.</li>
+            <li>Round Second: <%= test.testScore.round_second %>/10.</li>
+            <li>Round Third: <%= test.testScore.round_third %>/10.</li>
+        </ul>
+    </ul>
+    <div>
+        <a class="btn btn-info" href="/tests">Back</a>
+        <a class="btn btn-warning" href="/tests/<%=test._id%>/edit">Edit Test</a>
+        <form class="d-inline" action="/tests/<%= test._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger d-inline">Detele</button>
+        </form>
+    </div>
+       </div>
+   </div>

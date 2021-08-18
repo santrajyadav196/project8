@@ -1,0 +1,12 @@
+<% layout ('layouts/boilerplate') %> 
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h3>Names:</h3>
+            <ul>
+                <% for(let test of tests) { %> 
+                    <li><a href="/tests/<%= test._id %>"><%= test.name %> </a></li>
+                        <% } %>
+            </ul>
+            <a class="btn btn-primary" href="/tests/new">New Test</a>
+        </div>
+    </div>
